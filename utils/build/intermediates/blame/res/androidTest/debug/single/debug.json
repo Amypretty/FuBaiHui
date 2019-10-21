@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "D:\\weproject\\FuBaiHui\\utils\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_supertoast.xml.flat",
+        "source": "D:\\weproject\\FuBaiHui\\utils\\build\\intermediates\\bundles\\debug\\res\\layout\\supertoast.xml"
+    },
+    {
+        "merged": "D:\\weproject\\FuBaiHui\\utils\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_icon_dark_info.png.flat",
+        "source": "D:\\weproject\\FuBaiHui\\utils\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_dark_info.png"
+    },
+    {
+        "merged": "D:\\weproject\\FuBaiHui\\utils\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_icon_dark_exit.png.flat",
+        "source": "D:\\weproject\\FuBaiHui\\utils\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_dark_exit.png"
+    },
+    {
+        "merged": "D:\\shixun\\news1901\\utils\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_icon_dark_exit.png.flat",
+        "source": "D:\\shixun\\news1901\\utils\\build\\intermediates\\packaged_res\\debug\\drawable-xhdpi-v4\\icon_dark_exit.png"
+    },
+    {
+        "merged": "D:\\shixun\\news1901\\utils\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_background_kitkat_gray.xml.flat",
+        "source": "D:\\shixun\\news1901\\utils\\build\\intermediates\\packaged_res\\debug\\drawable\\background_kitkat_gray.xml"
+    },
+    {
+        "merged": "C:\\Users\\admin\\Desktop\\a\\utils\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_icon_dark_info.png.flat",
+        "source": "C:\\Users\\admin\\Desktop\\a\\utils\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_dark_info.png"
+    },
+    {
+        "merged": "D:\\weproject\\weoneproject\\utils\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_background_kitkat_gray.xml.flat",
+        "source": "D:\\weproject\\weoneproject\\utils\\build\\intermediates\\bundles\\debug\\res\\drawable\\background_kitkat_gray.xml"
+    },
+    {
+        "merged": "D:\\weproject\\weoneproject\\utils\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_supertoast.xml.flat",
+        "source": "D:\\weproject\\weoneproject\\utils\\build\\intermediates\\bundles\\debug\\res\\layout\\supertoast.xml"
+    },
+    {
+        "merged": "D:\\shixun\\news1901\\utils\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_icon_dark_info.png.flat",
+        "source": "D:\\shixun\\news1901\\utils\\build\\intermediates\\packaged_res\\debug\\drawable-xhdpi-v4\\icon_dark_info.png"
+    },
+    {
+        "merged": "C:\\Users\\admin\\Desktop\\a\\utils\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_background_kitkat_gray.xml.flat",
+        "source": "C:\\Users\\admin\\Desktop\\a\\utils\\build\\intermediates\\bundles\\debug\\res\\drawable\\background_kitkat_gray.xml"
+    },
+    {
+        "merged": "D:\\weproject\\FuBaiHui\\utils\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_background_kitkat_gray.xml.flat",
+        "source": "D:\\weproject\\FuBaiHui\\utils\\build\\intermediates\\bundles\\debug\\res\\drawable\\background_kitkat_gray.xml"
+    },
+    {
+        "merged": "D:\\shixun\\news1901\\utils\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_supertoast.xml.flat",
+        "source": "D:\\shixun\\news1901\\utils\\build\\intermediates\\packaged_res\\debug\\layout\\supertoast.xml"
+    },
+    {
+        "merged": "C:\\Users\\admin\\Desktop\\a\\utils\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_icon_dark_exit.png.flat",
+        "source": "C:\\Users\\admin\\Desktop\\a\\utils\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_dark_exit.png"
+    },
+    {
+        "merged": "D:\\weproject\\weoneproject\\utils\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_icon_dark_info.png.flat",
+        "source": "D:\\weproject\\weoneproject\\utils\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_dark_info.png"
+    },
+    {
+        "merged": "C:\\Users\\admin\\Desktop\\a\\utils\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_supertoast.xml.flat",
+        "source": "C:\\Users\\admin\\Desktop\\a\\utils\\build\\intermediates\\bundles\\debug\\res\\layout\\supertoast.xml"
+    },
+    {
+        "merged": "D:\\weproject\\weoneproject\\utils\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_icon_dark_exit.png.flat",
+        "source": "D:\\weproject\\weoneproject\\utils\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_dark_exit.png"
+    }
+]

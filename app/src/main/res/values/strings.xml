@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FuBaiHui</string>
+    <string name="home">首页</string>
+    <string name="news">新闻资讯</string>
+    <string name="shop">购物车</string>
+    <string name="my">我的</string>
+</resources>
