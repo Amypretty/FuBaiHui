@@ -20,6 +20,7 @@ import javax.crypto.spec.SecretKeySpec;
 @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
 public class NetHeaders {
     private static String userAgent;
+
     static {
         if (TextUtils.isEmpty(userAgent))
             userAgent = getUserAgent();
@@ -29,10 +30,12 @@ public class NetHeaders {
         Map<String, String> headers = new HashMap<>();
         headers.put("Pragma", "no-cache");
         headers.put("Cache-Control", "no-cache");
-        headers.put("Authorization", Application1901.getApplication().mToken);
+        if (Application1901.getApplication().mToken != null) {
+            headers.put("Authorization", Application1901.getApplication().mToken);
+        }
         headers.put("UUID", Application1901.getApplication().mUuid.toString());
-        headers.put("device_id",Application1901.getApplication().mUuid.toString());
-        headers.put("plat_form","android");
+        headers.put("device_id", Application1901.getApplication().mUuid.toString());
+        headers.put("plat_form", "android");
         headers.put("device-tag", "0");
         headers.put("User-Agent", userAgent);
         headers.put("lang", "zh-cn");
