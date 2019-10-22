@@ -51,6 +51,7 @@ public class NewsFragment extends BaseFragment {
 
     @Override
     protected void initdata() {
+        
         //新闻资讯
     }
 
