@@ -92,14 +92,22 @@ public class NewsFragment extends BaseFragment {
                 if (newsinformationInfo.getList() != null && newsinformationInfo.getList().size() > 0) {
                     mListBeans.addAll(infoList);
                 }
+
+
                 mRefresh.setRefreshing(false);
+
+
                 mNewsAdapter.notifyDataSetChanged();
+
+
                 break;
         }
     }
 
     @Override
     public void onFailed(int whichApi, Throwable failedResult) {
+            int a = 0;
 
+            
     }
 }
