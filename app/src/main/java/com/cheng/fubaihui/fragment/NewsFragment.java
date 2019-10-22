@@ -70,6 +70,17 @@ public class NewsFragment extends BaseFragment {
 
     @Override
     public int getLayoutId() {
+
+
+
+
+
+
+
+
+
+
+        
         return R.layout.fragment_news;
     }
 
@@ -107,7 +118,8 @@ public class NewsFragment extends BaseFragment {
     @Override
     public void onFailed(int whichApi, Throwable failedResult) {
             int a = 0;
+            int b = 0;
 
-            
+
     }
 }
