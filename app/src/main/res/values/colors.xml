@@ -13,4 +13,9 @@
     <color name="textGrey">#cfcece</color>
     <color name="black">#040404</color>
 
+    <color name="Borderlines">#c1c1bf</color>
+
+    <color name="green">#009847</color>
+
+    <color name="lucency">#00ffffff</color>
 </resources>

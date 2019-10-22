@@ -52,6 +52,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".ForgetPwdActivity">
+        </activity>
+        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".LoginActivity">
+        </activity>
     </application>
 
 </manifest>
