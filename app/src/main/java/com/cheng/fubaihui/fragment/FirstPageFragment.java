@@ -10,7 +10,6 @@ import com.cheng.fubaihui.frame.ICommonModel;
 public class FirstPageFragment extends BaseFragment {
     static FirstPageFragment fragment;
 
-
     public static FirstPageFragment newInstance() {
         if (fragment == null) fragment = new FirstPageFragment();
         return fragment;
