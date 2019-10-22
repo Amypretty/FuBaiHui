@@ -18,7 +18,8 @@ public abstract class BaseFragment extends Fragment implements ICommonView{
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = LayoutInflater.from(container.getContext()).inflate(getLayoutId(), null);
+//        View view = LayoutInflater.from(container.getContext()).inflate(getLayoutId(), null);
+        View view = inflater.inflate(getLayoutId(), container, false);
         mMainPresenter = new CommonPresenter();
         if(mMainPresenter!=null) {
             mMainPresenter.bind(this, setModle());
