@@ -17,6 +17,7 @@ public class Application1901 extends Application {
     private static Application1901 sApplication;
     public String mToken;
     public UUID mUuid;
+    public String mUid;
 
     @Override
     public void onCreate() {

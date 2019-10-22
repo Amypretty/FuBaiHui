@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cheng.fubaihui.ForgetPwdActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="忘记密码"
+            android:textSize="@dimen/sp_18" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_15"
+        android:padding="@dimen/dp_5"
+        android:background="@drawable/shape_bg"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/phoneNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@null"
+            android:drawableBottom="@drawable/shape_et_bottom_line"
+            android:hint="请输入手机号"
+            android:textColorHint="#a19f9f"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textCursorDrawable="@null" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:drawableBottom="@drawable/shape_et_bottom_line"
+                android:hint="请输入验证码"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textColorHint="#a19f9f"
+                android:textCursorDrawable="@null" />
+
+            <TextView
+                android:layout_width="@dimen/dp_0_5"
+                android:layout_height="@dimen/dp_15"
+                android:layout_gravity="center"
+                android:layout_toLeftOf="@id/get_verify"
+                android:background="#a19f9f"
+                android:text="|" />
+
+            <TextView
+                android:id="@+id/get_verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_5"
+                android:textColor="#a19f9f"
+                android:layout_weight="1"
+                android:text="获取验证码" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/new_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@null"
+                android:drawableBottom="@drawable/shape_et_bottom_line"
+                android:hint="设置新密码"
+                android:inputType="textPassword"
+                android:textColorHint="#a19f9f"
+                android:textCursorDrawable="@null" />
+
+            <ImageView
+                android:id="@+id/is_show_pwd"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_5"
+                android:src="@drawable/is_showpwd" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="*新密码需包含有小写字母、大写字母、数字、特殊符号的两种以上"
+        android:textColor="#a19f9f" />
+
+    <Button
+        android:id="@+id/re_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_50"
+        android:text="提交"
+        android:background="@drawable/forget_btn_selected"/>
+</LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="@dimen/dp_110"
+        android:layout_height="@dimen/dp_110"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_40"
+        android:src="@drawable/fbh"/>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="@dimen/dp_270"
+        android:orientation="horizontal"
+        android:background="@drawable/login_frame_shape"
+        android:layout_height="@dimen/dp_40">
+        <ImageView
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/username_img"/>
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@color/lucency"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入手机号"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="@dimen/dp_270"
+        android:orientation="horizontal"
+        android:background="@drawable/login_frame_shape"
+        android:layout_height="@dimen/dp_40">
+        <ImageView
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/psw_img"/>
+        <EditText
+            android:id="@+id/pwd"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@color/lucency"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入密码"/>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/login_bt"
+        android:layout_width="@dimen/dp_270"
+        android:layout_height="@dimen/dp_40"
+        android:text="确定登陆"
+        android:background="@drawable/login_bt_shape"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_30"
+        android:textColor="@color/white"/>
+
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="@dimen/dp_270"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/Registertv"
+            android:text="立即注册"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/forget"
+            android:text="忘记密码?"
+            android:textColor="@color/black"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="@dimen/dp_230"
+        android:layout_height="@dimen/dp_40">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="登陆即表示同意福百慧用户协议"/>
+    </LinearLayout>
+
+</LinearLayout>

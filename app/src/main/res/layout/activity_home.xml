@@ -10,31 +10,16 @@
         android:id="@+id/frame_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/bottom_view" />
+        android:layout_above="@id/tab" />
 
 
-    <com.cheng.fubaihui.MyView.MyBottomView
-        android:id="@+id/bottom_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <android.support.design.widget.TabLayout
         android:layout_alignParentBottom="true"
-        app:bottomNum="4"
-        app:bottomTextSize="@dimen/sp_6"
-        app:changeDrawable="true"
-        app:changeTextColor="true"
-        app:imageSelectedFirst="@mipmap/homeselect"
-        app:imageSelectedFourth="@mipmap/myselect"
-        app:imageSelectedSecond="@mipmap/commendselect"
-        app:imageSelectedThird="@mipmap/shopselect"
-        app:imageUnSelectedFirst="@mipmap/home"
-        app:imageUnSelectedFourth="@mipmap/my"
-        app:imageUnSelectedSecond="@mipmap/commend"
-        app:imageUnSelectedThird="@mipmap/shop"
-        app:textFirst="@string/home"
-        app:textFourth="@string/my"
-        app:textSecond="@string/news"
-        app:textSelectedColor="@color/app_theme_color"
-        app:textThird="@string/shop"
-        app:textUnSelectedColor="@color/grey_first" />
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.design.widget.TabLayout>
+
 
 </RelativeLayout>

@@ -67,7 +67,7 @@ public class NetInterceptor {
                 .readTimeout(10, TimeUnit.SECONDS)
                 .writeTimeout(10, TimeUnit.SECONDS)
                 .addInterceptor(getLogInterceptor())
-                .addInterceptor(new CommonHeadersInterceptor())
+                .addInterceptor(new CommonParamsPostInterceptor())
                 .sslSocketFactory(NetTrustManager.getNetTrustManager().createSSLSocketFactory()).hostnameVerifier(new NetTrustManager.TrustAllHostnameVerifier())
                 .build();
     }
@@ -140,6 +140,10 @@ public class NetInterceptor {
         public Response intercept(Chain chain) throws IOException {
             FormBody.Builder formBuilder = new FormBody.Builder();
             formBuilder.add("__timestamp", String.valueOf(System.currentTimeMillis()));
+            if (Application1901.getApplication().mUid != null)
+                formBuilder.add("uid", Application1901.getApplication().mUid);
+            if (Application1901.getApplication().mToken!=null)
+                formBuilder.add("token",Application1901.getApplication().mToken);
 //            formBuilder.add("deviceToken", new AES().encrypt("ABC"));
             RequestBody commonRequestBody = formBuilder.build();
             Request request = chain.request();
