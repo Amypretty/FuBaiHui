@@ -5,6 +5,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 
 import com.cheng.fubaihui.R;
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NewsFragment extends BaseFragment {
+    private static final String TAG = "NewsFragment";
     static NewsFragment fragment;
     private RecyclerView mRec;
     private SwipeRefreshLayout mRefresh;
@@ -41,25 +43,25 @@ public class NewsFragment extends BaseFragment {
         mNewsAdapter = new NewsAdapter(getContext(), mListBeans);
         mRec.setAdapter(mNewsAdapter);
 
+        if (mRefresh.isRefreshing()) {
+            mRefresh.setRefreshing(false);
+        }
         mRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
+                Log.i(TAG, "onRefresh: " + "VVVVVVVVV");
                 mRefresh.setRefreshing(true);//刷新控件进行刷新
+//                mMainPresenter.getData(ApiConfig.POST_NEWS_REFRESH_TEST);//上拉刷新数据
             }
         });
     }
 
     @Override
     protected void initdata() {
-        
         //新闻资讯
+        mMainPresenter.getData(ApiConfig.POST_NEWS_INFORMATION_TEST);
     }
 
-
-    private void getData(int loadMode) {
-        //新闻资讯
-        mMainPresenter.getData(ApiConfig.POST_NEWS_INFORMATION_TEST, loadMode);
-    }
 
     @Override
     protected ICommonModel setModle() {
@@ -68,24 +70,56 @@ public class NewsFragment extends BaseFragment {
 
     @Override
     public int getLayoutId() {
+
+
+
+
+
+
+
+
+
+
+        
         return R.layout.fragment_news;
     }
 
     @Override
     public void onSuccess(int whichApi, Object successResult) {
+        NewsinformationInfo newsinformationInfo = (NewsinformationInfo) successResult;
+        List<NewsinformationInfo.ListBean> infoList = newsinformationInfo.getList();
         switch (whichApi) {
             case ApiConfig.POST_NEWS_INFORMATION_TEST:
-                NewsinformationInfo newsinformationInfo = (NewsinformationInfo) successResult;
-                List<NewsinformationInfo.ListBean> infoList = newsinformationInfo.getList();
+                Log.i(TAG, "onSuccess: " + "VV__normal__VV");
                 if (newsinformationInfo.getList() != null && newsinformationInfo.getList().size() > 0)
                     mListBeans.addAll(infoList);
                 mNewsAdapter.notifyDataSetChanged();
+                break;
+            case ApiConfig.POST_NEWS_REFRESH_TEST:
+                Log.i(TAG, "onSuccess: " + "VVVVVVV");
+                if (mListBeans.size() > 0) {
+                    mListBeans.clear();
+                }
+                if (newsinformationInfo.getList() != null && newsinformationInfo.getList().size() > 0) {
+                    mListBeans.addAll(infoList);
+                }
+
+
+                mRefresh.setRefreshing(false);
+
+
+                mNewsAdapter.notifyDataSetChanged();
+
+
                 break;
         }
     }
 
     @Override
     public void onFailed(int whichApi, Throwable failedResult) {
+            int a = 0;
+            int b = 0;
+
 
     }
 }
