@@ -35,7 +35,16 @@ public class TestModel implements ICommonModel {
             case ApiConfig.POST_FORGET_PWD:
 
                 manager.method(manager.getNetService().rePwd((String) params[0],
-                        (String) params[1], (String) params[2]),whichApi,presenterCallBack);
+                        (String) params[1], (String) params[2]), whichApi, presenterCallBack);
+                break;
+
+            case ApiConfig.POST_SHOPS_LIST:
+                manager.method(manager.getNetService().getShopList((Integer) params[0]),
+                        whichApi, presenterCallBack);
+                break;
+            case ApiConfig.POST_LOCATION:
+                manager.method(manager.getNetService().getLocation(),
+                        whichApi, presenterCallBack);
                 break;
 
         }

@@ -47,6 +47,7 @@ public class MyFragment extends BaseFragment {
     LinearLayout mLinear;
     @BindView(R.id.li)
     LinearLayout mLi;
+    private String mName;
 
 
     public static MyFragment newInstance() {

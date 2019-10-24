@@ -11,6 +11,7 @@
     <color name="white">#FFFFFF</color>
     <color name="grey">#F5F6F7</color>
     <color name="textGrey">#cfcece</color>
+    <color name="text_bg_Grey">#6c6c6c</color>
     <color name="black">#040404</color>
 
     <color name="Borderlines">#c1c1bf</color>

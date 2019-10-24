@@ -37,6 +37,7 @@ public class LoginActivity extends BaseMvpActivity {
     TextView mForget;
 
     boolean isFirstOpen = false;
+    private Intent mIntent;
 
    /* @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -65,6 +66,7 @@ public class LoginActivity extends BaseMvpActivity {
     @Override
     public void setUp() {
 
+        mIntent = getIntent();
     }
 
 
@@ -102,8 +104,7 @@ public class LoginActivity extends BaseMvpActivity {
                 LoginBean loginBean = (LoginBean) successResult;
                 if (loginBean.getCode() == 200) {
                     Toast.makeText(this, "" + loginBean.getMsg(), Toast.LENGTH_SHORT).show();
-
-                    startActivity(new Intent(this, HomeActivity.class));
+                    setResult(2,mIntent);
                     SharedPrefrenceUtils.saveBoolean(this,"isLogin", true);
                     Application1901.getApplication().mUid = loginBean.getData().getUid()+"";
                     finish();
