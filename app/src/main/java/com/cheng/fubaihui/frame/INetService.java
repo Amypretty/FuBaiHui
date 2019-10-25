@@ -1,6 +1,6 @@
 package com.cheng.fubaihui.frame;
 
-import com.cheng.fubaihui.bean.BannerInfo;
+import com.cheng.fubaihui.bean.LocationBean;
 import com.cheng.fubaihui.bean.LoginBean;
 import com.cheng.fubaihui.bean.MallnameInfo;
 import com.cheng.fubaihui.bean.NewsinformationInfo;
@@ -8,6 +8,7 @@ import com.cheng.fubaihui.bean.NoteCode_Bean;
 import com.cheng.fubaihui.bean.RePwdBean;
 import com.cheng.fubaihui.bean.RegisterBean;
 import com.cheng.fubaihui.bean.ShopInfo;
+import com.cheng.fubaihui.bean.ShopsBean;
 
 import io.reactivex.Observable;
 import retrofit2.http.Field;
@@ -73,4 +74,11 @@ public interface INetService {
     Observable<ShopInfo> getnewsinfodetails(@Query("id")String id);
 
 
+
+    @POST("APP/Xtojoin/garage_list")
+    @FormUrlEncoded
+    Observable<ShopsBean> getShopList(@Field("type") int type);
+
+    @POST("APP/Xinv/sjtojoininfo")
+    Observable<LocationBean> getLocation();
 }

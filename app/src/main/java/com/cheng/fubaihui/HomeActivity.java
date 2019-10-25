@@ -36,6 +36,7 @@ public class HomeActivity extends BaseMvpActivity<TestModel> implements MyBottom
     private static final String TAG = "HomeActivity";
     @BindView(R.id.tab)
     TabLayout mTab;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,8 +62,6 @@ public class HomeActivity extends BaseMvpActivity<TestModel> implements MyBottom
                 if (tab.getPosition()==0){
                     showFragment(tab.getPosition());
                 }else {
-
-
                     isLogin(tab.getPosition());
                 }
 
@@ -175,13 +174,21 @@ public class HomeActivity extends BaseMvpActivity<TestModel> implements MyBottom
     private void isLogin(int type) {
         boolean isLogin = SharedPrefrenceUtils.getBoolean(this, "isLogin");
         if (!isLogin){
-
             //未登录
-            startActivity(new Intent(this,LoginActivity.class));
+            Intent intent = new Intent(this, LoginActivity.class);
+            intent.putExtra("type",type);
+            startActivityForResult(intent,1);
         }else {
-            mTab.setSelected(true);
             Log.i(TAG, "onSecondClick: " + "VVVVVV");
             showFragment(type);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode==1&&resultCode==2){
+            showFragment(data.getIntExtra("type",1));
         }
     }
 

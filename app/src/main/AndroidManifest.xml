@@ -27,6 +27,7 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <!-- 震动权限 -->
     <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature android:name="android.hardware.camera" />
     <!-- 使用照相机权限 -->
     <uses-feature android:name="android.hardware.camera.autofocus" />
@@ -51,11 +52,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomeActivity"></activity>
-        <activity android:name=".ForgetPwdActivity">
-        </activity>
-        <activity android:name=".RegisterActivity"></activity>
-        <activity android:name=".LoginActivity">
+        <activity
+            android:name=".HomeActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".ForgetPwdActivity"></activity>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".IntegralAndJoinShopActivity">
+
         </activity>
     </application>
 
