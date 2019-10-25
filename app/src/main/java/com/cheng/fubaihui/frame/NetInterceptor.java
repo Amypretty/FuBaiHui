@@ -71,7 +71,15 @@ public class NetInterceptor {
                 .sslSocketFactory(NetTrustManager.getNetTrustManager().createSSLSocketFactory()).hostnameVerifier(new NetTrustManager.TrustAllHostnameVerifier())
                 .build();
     }
-
+    public OkHttpClient getClientWithoutCacheByGet() {
+        return new OkHttpClient.Builder()
+                .connectTimeout(10, TimeUnit.SECONDS)
+                .readTimeout(10, TimeUnit.SECONDS)
+                .writeTimeout(10, TimeUnit.SECONDS)
+                .addInterceptor(getLogInterceptor())
+                .sslSocketFactory(NetTrustManager.getNetTrustManager().createSSLSocketFactory()).hostnameVerifier(new NetTrustManager.TrustAllHostnameVerifier())
+                .build();
+    }
     public OkHttpClient getClientWithCache() {
         return new OkHttpClient.Builder()
                 .cache(new Cache(new File(Application1901.getApplication().getCacheDir(), "NetCache1901"), 10 * 1024 * 1024))

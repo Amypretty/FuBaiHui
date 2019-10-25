@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void accept(Long aLong) throws Exception {
                 startActivity(new Intent(MainActivity.this, HomeActivity.class));
-
+                finish();
             }
         });
     }

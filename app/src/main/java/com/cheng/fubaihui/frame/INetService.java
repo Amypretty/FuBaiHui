@@ -1,16 +1,20 @@
 package com.cheng.fubaihui.frame;
 
+import com.cheng.fubaihui.bean.BannerInfo;
 import com.cheng.fubaihui.bean.LoginBean;
+import com.cheng.fubaihui.bean.MallnameInfo;
 import com.cheng.fubaihui.bean.NewsinformationInfo;
 import com.cheng.fubaihui.bean.NoteCode_Bean;
 import com.cheng.fubaihui.bean.RePwdBean;
 import com.cheng.fubaihui.bean.RegisterBean;
+import com.cheng.fubaihui.bean.ShopInfo;
 
 import io.reactivex.Observable;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 
@@ -52,4 +56,21 @@ public interface INetService {
     @FormUrlEncoded
     Observable<RePwdBean> rePwd(@Field("phone") String phone,
                                 @Field("password")String password, @Field("yzm")String yzm);
+
+
+    //http://newwasj.zhangtongdongli.com/APP/public/category_list
+    @GET("APP/public/category_list")//福百惠商城,侧面垂直的tab
+    Observable<MallnameInfo> mallName();
+
+    //http://newwasj.zhangtongdongli.com/
+    @GET("APP/Public/bander/name/shop_top")//福百惠商城，banner
+    Observable<BannerInfo> bannerList();
+
+    @GET("APP/Shop/index/cid/{id}")//福百惠商城，商品列表
+    Observable<ShopInfo> shopList(@Path("id") String id);
+
+    @GET("APP/Love/informationDetail/{id}")//新闻资讯的详情页
+    Observable<ShopInfo> getnewsinfodetails(@Query("id")String id);
+
+
 }

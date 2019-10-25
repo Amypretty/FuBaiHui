@@ -40,7 +40,15 @@ public class NetManager {
                 .build().create(INetService.class);
         return service;
     }
-
+    public <T> INetService getNetServiceByGet(T... t) {
+        INetService service = new Retrofit.Builder()
+                .baseUrl(t != null && t.length != 0 && !TextUtils.isEmpty((String) t[0]) ? (String) t[0] : Config.BASEURL)
+                .addConverterFactory(MyGsonConverterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .client(NetInterceptor.getNetInterceptor().getClientWithoutCacheByGet())
+                .build().create(INetService.class);
+        return service;
+    }
     public <T> void method(Observable<T> pObservable, final int whichApi, final ICommonView presenterCallBack) {
         pObservable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())

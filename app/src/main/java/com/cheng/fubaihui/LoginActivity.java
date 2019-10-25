@@ -101,7 +101,7 @@ public class LoginActivity extends BaseMvpActivity {
             case ApiConfig.LOGINING:
                 LoginBean loginBean = (LoginBean) successResult;
                 if (loginBean.getCode() == 200) {
-                    Toast.makeText(this, "" + loginBean.getMsg(), Toast.LENGTH_SHORT).show();
+       Toast.makeText(this, "" + loginBean.getMsg(), Toast.LENGTH_SHORT).show();
 
                     startActivity(new Intent(this, HomeActivity.class));
                     SharedPrefrenceUtils.saveBoolean(this,"isLogin", true);

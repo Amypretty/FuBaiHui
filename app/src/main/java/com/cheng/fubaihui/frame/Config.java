@@ -14,7 +14,7 @@ public class Config {
      */
     static {
         if (type == 1){//在一种环境下可能有多个服务器
-            BASEURL = "http://newwasj.zhangtongdongli.com";
+            BASEURL = "http://newwasj.zhangtongdongli.com/";
         } else if (type == 2){
             BASEURL = "http://baidu.com/";
         } else {
