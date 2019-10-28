@@ -6,6 +6,7 @@ import com.cheng.fubaihui.bean.NewsinformationInfo;
 import com.cheng.fubaihui.bean.NoteCode_Bean;
 import com.cheng.fubaihui.bean.RePwdBean;
 import com.cheng.fubaihui.bean.RegisterBean;
+import com.cheng.fubaihui.bean.ShopDetailsBean;
 import com.cheng.fubaihui.bean.ShopsBean;
 
 import io.reactivex.Observable;
@@ -61,4 +62,8 @@ public interface INetService {
 
     @POST("APP/Xinv/sjtojoininfo")
     Observable<LocationBean> getLocation();
+
+    @POST("APP/Xtojoin/mer_details")
+    @FormUrlEncoded
+    Observable<ShopDetailsBean> getShopDetails(@Field("id") String id);
 }

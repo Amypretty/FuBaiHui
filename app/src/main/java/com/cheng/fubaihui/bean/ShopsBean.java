@@ -1,5 +1,8 @@
 package com.cheng.fubaihui.bean;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.List;
 
 /**
@@ -42,7 +45,7 @@ public class ShopsBean {
         this.data = data;
     }
 
-    public static class DataBean {
+    public static class DataBean implements Parcelable {
         /**
          * id : 170
          * name : 福百惠会员银积分兑换中心
@@ -96,5 +99,42 @@ public class ShopsBean {
         public void setLatitude(String latitude) {
             this.latitude = latitude;
         }
+
+        @Override
+        public int describeContents() {
+            return 0;
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            dest.writeString(this.id);
+            dest.writeString(this.name);
+            dest.writeString(this.logo);
+            dest.writeString(this.longitude);
+            dest.writeString(this.latitude);
+        }
+
+        public DataBean() {
+        }
+
+        protected DataBean(Parcel in) {
+            this.id = in.readString();
+            this.name = in.readString();
+            this.logo = in.readString();
+            this.longitude = in.readString();
+            this.latitude = in.readString();
+        }
+
+        public static final Parcelable.Creator<DataBean> CREATOR = new Parcelable.Creator<DataBean>() {
+            @Override
+            public DataBean createFromParcel(Parcel source) {
+                return new DataBean(source);
+            }
+
+            @Override
+            public DataBean[] newArray(int size) {
+                return new DataBean[size];
+            }
+        };
     }
 }

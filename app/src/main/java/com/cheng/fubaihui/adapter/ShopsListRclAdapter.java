@@ -13,6 +13,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
 import com.cheng.fubaihui.R;
+import com.cheng.fubaihui.ShopDetailsActivity;
 import com.cheng.fubaihui.bean.ShopsBean;
 import com.cheng.fubaihui.frame.ApiConfig;
 import com.cheng.fubaihui.frame.Config;
@@ -45,7 +46,7 @@ public class ShopsListRclAdapter extends RecyclerView.Adapter<ShopsListRclAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         holder.mNameShop.setText(mList.get(position).getName());
         holder.mDistance.setText(mList.get(position).getLatitude());
         RoundedCorners corners = new RoundedCorners(10);
@@ -55,6 +56,12 @@ public class ShopsListRclAdapter extends RecyclerView.Adapter<ShopsListRclAdapte
                 .load(Config.BASEURL+mList.get(position).getLogo())
                 .apply(transform)
                 .into(holder.mImgShop);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ShopDetailsActivity.startShopDetailsActivity(mContext,mList.get(position));
+            }
+        });
     }
 
     @Override

@@ -46,6 +46,10 @@ public class TestModel implements ICommonModel {
                 manager.method(manager.getNetService().getLocation(),
                         whichApi, presenterCallBack);
                 break;
+            case ApiConfig.POST_SHOP_DETAILS:
+                manager.method(manager.getNetService().getShopDetails((String)params[0]),
+                        whichApi, presenterCallBack);
+                break;
 
         }
     }

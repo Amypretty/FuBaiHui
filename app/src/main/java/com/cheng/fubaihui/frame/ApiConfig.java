@@ -15,4 +15,5 @@ public class ApiConfig {
     public static final int POST_SHOPS_LIST = 6;
     public static final int POST_LOCATION = 7;
     public static final int POST_NEWS_REFRESH_TEST =8 ;
+    public static final int POST_SHOP_DETAILS = 9;
 }

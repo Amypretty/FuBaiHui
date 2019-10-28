@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cheng.fubaihui">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
@@ -55,12 +57,13 @@
         <activity
             android:name=".HomeActivity"
             android:launchMode="singleTask" />
-        <activity android:name=".ForgetPwdActivity"></activity>
+        <activity android:name=".ForgetPwdActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
         <activity android:name=".IntegralAndJoinShopActivity">
 
         </activity>
+        <activity android:name=".ShopDetailsActivity"></activity>
     </application>
 
 </manifest>

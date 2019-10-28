@@ -226,6 +226,7 @@ public class IntegralAndJoinShopActivity extends BaseMvpActivity<TestModel> impl
 
     }
 
+    private boolean isShowing = false;
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -245,14 +246,19 @@ public class IntegralAndJoinShopActivity extends BaseMvpActivity<TestModel> impl
                     mPvOptions.dismiss();
                 }
 
-                if (mShowShopTypePop != null) {
+                if (mShowShopTypePop != null&&!isShowing) {
                     mShowShopTypePop.showAsDropDown(mTvFilter,0,20);
+                    isShowing =true;
                     //mShowShopTypePop.showAtLocation(mTvFilter, Gravity.RIGHT, 0, -100);
-
+                }else if (mShowShopTypePop!=null){
+                    mShowShopTypePop.dismiss();
+                    isShowing =false;
+                    //Toast.makeText(this, "请稍等正在加载数据", Toast.LENGTH_SHORT).show();
                 }else {
                     Toast.makeText(this, "请稍等正在加载数据", Toast.LENGTH_SHORT).show();
                 }
                 //Toast.makeText(this, "分类pop", Toast.LENGTH_SHORT).show();
+
                 break;
         }
     }
