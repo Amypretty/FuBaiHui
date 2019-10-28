@@ -33,7 +33,6 @@ public class TestModel implements ICommonModel {
                         (String) params[1]), whichApi, presenterCallBack);
                 break;
             case ApiConfig.POST_FORGET_PWD:
-
                 manager.method(manager.getNetService().rePwd((String) params[0],
                         (String) params[1], (String) params[2]), whichApi, presenterCallBack);
                 break;
@@ -50,6 +49,24 @@ public class TestModel implements ICommonModel {
                 manager.method(manager.getNetService().getShopDetails((String)params[0]),
                         whichApi, presenterCallBack);
                 break;
+
+            case ApiConfig.GET_MALL_NAME_LIST:
+
+                manager.method(manager.getNetServiceByGet(Config.BASEURL).mallName(),whichApi,presenterCallBack);
+                break;
+
+             case ApiConfig.GET_BANNER_LIST:
+                manager.method(manager.getNetServiceByGet(Config.BASEURL).bannerList(),whichApi,presenterCallBack);
+                break;
+            case ApiConfig.GET_SHOP_LIST:
+                manager.method(manager.getNetServiceByGet(Config.BASEURL).shopList((String)params[0]),whichApi,presenterCallBack);
+                break;
+
+                //资讯详情
+             case ApiConfig.GET_NEWS_DETAILS:
+                manager.method(manager.getNetServiceByGet(Config.BASEURL).getnewsinfodetails((String)params[0]),whichApi,presenterCallBack);
+                break;
+
 
         }
     }

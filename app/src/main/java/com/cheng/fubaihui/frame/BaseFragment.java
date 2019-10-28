@@ -26,7 +26,11 @@ public abstract class BaseFragment extends Fragment implements ICommonView{
         }
         initView(view);
         initdata();
+        initListenter();
         return view;
+    }
+
+    public void initListenter() {
     }
 
     protected abstract void initdata();

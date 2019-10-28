@@ -2,11 +2,13 @@ package com.cheng.fubaihui.frame;
 
 import com.cheng.fubaihui.bean.LocationBean;
 import com.cheng.fubaihui.bean.LoginBean;
+import com.cheng.fubaihui.bean.MallnameInfo;
 import com.cheng.fubaihui.bean.NewsinformationInfo;
 import com.cheng.fubaihui.bean.NoteCode_Bean;
 import com.cheng.fubaihui.bean.RePwdBean;
 import com.cheng.fubaihui.bean.RegisterBean;
 import com.cheng.fubaihui.bean.ShopDetailsBean;
+import com.cheng.fubaihui.bean.ShopInfo;
 import com.cheng.fubaihui.bean.ShopsBean;
 
 import io.reactivex.Observable;
@@ -55,6 +57,23 @@ public interface INetService {
     @FormUrlEncoded
     Observable<RePwdBean> rePwd(@Field("phone") String phone,
                                 @Field("password")String password, @Field("yzm")String yzm);
+
+
+    //http://newwasj.zhangtongdongli.com/APP/public/category_list
+    @GET("APP/public/category_list")//福百惠商城,侧面垂直的tab
+    Observable<MallnameInfo> mallName();
+
+    //http://newwasj.zhangtongdongli.com/
+    @GET("APP/Public/bander/name/shop_top")//福百惠商城，banner
+    Observable<BannerInfo> bannerList();
+
+    @GET("APP/Shop/index/cid/{id}")//福百惠商城，商品列表
+    Observable<ShopInfo> shopList(@Path("id") String id);
+
+    @GET("APP/Love/informationDetail/{id}")//新闻资讯的详情页
+    Observable<ShopInfo> getnewsinfodetails(@Query("id")String id);
+
+
 
     @POST("APP/Xtojoin/garage_list")
     @FormUrlEncoded

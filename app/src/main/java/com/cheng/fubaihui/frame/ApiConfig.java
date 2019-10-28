@@ -16,4 +16,13 @@ public class ApiConfig {
     public static final int POST_LOCATION = 7;
     public static final int POST_NEWS_REFRESH_TEST =8 ;
     public static final int POST_SHOP_DETAILS = 9;
+
+    //福百惠商场里的商场名字
+    public static final int GET_MALL_NAME_LIST = 10;
+    public static final int GET_BANNER_LIST = 11;
+
+    public static final int GET_SHOP_LIST = 12;
+
+
+
 }

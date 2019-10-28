@@ -77,7 +77,6 @@ public class RegisterActivity extends BaseMvpActivity<TestModel> {
     public void initView() {
         mRegistToolbar.setTitle("");
         setSupportActionBar(mRegistToolbar);
-
     }
 
     @OnClick({R.id.regist_return, R.id.regist_toolbar, R.id.regist_ed_phone, R.id.regist_ed_code, R.id.regist_bt_code, R.id.regist_ed_psd, R.id.regist_ed_writecode, R.id.regist_ck, R.id.regist_bt, R.id.regist_tv_login})
